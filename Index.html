@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>iOS風ダークぼかしUI</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: url('https://cdn.discordapp.com/attachments/1273267901071360144/1385912221376450590/4B3FB969-668E-45F3-A4CD-E57A51A249ED.jpg?ex=6857cad6&is=68567956&hm=a3d083d7d0cfdbeea4c457a4f51114d40f001e2b9e340b1ad5acf6879c2ef1fe&');
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      filter: brightness(0.6); /* 背景を暗くする */
+    }
+
+    .glass-panel {
+      width: 600px;
+      height: 220px;
+      margin: 150px auto;
+      background: rgba(30, 30, 30, 0.4); 
+      backdrop-filter: blur(10px) saturate(120%);
+      -webkit-backdrop-filter: blur(10px) saturate(120%);
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: #fff;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin: 0 0 10px;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 0;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <div class="glass-panel">
+
+  </div>
+
+</body>
+</html>
